@@ -1,1 +1,1 @@
-import './example/basic/SimplePlane'
+import './example/advanced/Slots'
