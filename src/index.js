@@ -1,1 +1,1 @@
-import './example/advanced/Screenshot'
+import './example/advanced/Spinners'
