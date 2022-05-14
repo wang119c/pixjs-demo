@@ -1,1 +1,1 @@
-import './example/advanced/Slots'
+import './example/advanced/Screenshot'
