@@ -23,9 +23,14 @@ module.exports = {
         'css-loader'
       ]
     }, {
-      test: /\.(png|svg|jpg|gif)$/,
+      test: /\.(png|svg|jpg|gif|jpeg|mp4)$/,
       use: [
         'file-loader'
+      ]
+    }, {
+      test: /\.xml$/,
+      use: [
+        'xml-loader'
       ]
     }]
   },
