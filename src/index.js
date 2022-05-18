@@ -1,2 +1,2 @@
-import './example/GRAPHICS/Advanced'
+import './example/INTERACTION/CustomHitarea'
 
