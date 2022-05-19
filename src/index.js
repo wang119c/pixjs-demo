@@ -1,2 +1,2 @@
-import './example/INTERACTION/CustomHitarea'
+import './example/MASKS/Filter'
 
