@@ -1,2 +1,2 @@
-import './example/MASKS/Filter'
+import './example/FILTERS-BASIC/Blur'
 
