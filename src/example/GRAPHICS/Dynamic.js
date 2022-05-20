@@ -76,3 +76,4 @@ app.ticker.add(() => {
   thing.closePath()
   thing.rotation = count * 0.1
 })
+console.log('=====', 'ceshi3')

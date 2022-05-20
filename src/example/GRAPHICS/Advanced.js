@@ -2,6 +2,7 @@ import * as PIXI from 'pixi.js'
 import bg_rotate from '../../asset/bg_rotate.jpg'
 const app = new PIXI.Application({ antialias: true })
 document.body.appendChild(app.view)
+console.log('=====', 'ceshi2')
 
 const sprite = PIXI.Sprite.from(bg_rotate)
 const realPath = new PIXI.Graphics()
