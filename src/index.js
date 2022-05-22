@@ -1,1 +1,1 @@
-import './example/FILTERS-ADVANCED/PixieShadow'
+import './example/PLUGIN-FILTERS/Outline'
