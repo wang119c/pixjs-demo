@@ -2,6 +2,7 @@ import * as PIXI from 'pixi.js'
 import maggot1 from '../../asset/maggot.png'
 import displace from '../../asset/pixi-filters/displace.png'
 import ring1 from '../../asset/pixi-filters/ring.png'
+import bg_grass from '../../asset/bg_grass.jpg'
 
 const app = new PIXI.Application()
 document.body.appendChild(app.view)
@@ -39,17 +40,32 @@ for (let i = 0; i < 20; i++) {
 
 const displacementSprite = PIXI.Sprite.from(displace)
 const displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite)
-app.stage.addChild(displacementFilter)
-
+app.stage.addChild(displacementSprite)
 container.filters = [displacementFilter]
-displacementFilter.scale.x = 110
-displacementFilter.scale.y = 110
+displacementFilter.scale.x = 150
+displacementFilter.scale.y = 150
 displacementSprite.anchor.set(0.5)
 
 const ring = PIXI.Sprite.from(ring1)
 ring.anchor.set(0.5)
 ring.visible = false
 app.stage.addChild(ring)
+
+const bg = PIXI.Sprite.from(bg_grass)
+bg.width = app.screen.width
+bg.height = app.screen.height
+
+bg.alpha = 0.4
+
+app.stage.on('mousemove', onPointerMove)
+  .on('touchmove', onPointerMove)
+
+function onPointerMove (eventData) {
+  ring.visible = true
+
+  displacementSprite.position.set(eventData.data.global.x - 25, eventData.data.global.y)
+  ring.position.copyFrom(displacementSprite.position)
+}
 
 let count = 0
 app.ticker.add(() => {
