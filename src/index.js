@@ -1,1 +1,1 @@
-import './example/FILTERS-ADVANCED/CustomFilter'
+import './example/FILTERS-ADVANCED/PixieShadow'
