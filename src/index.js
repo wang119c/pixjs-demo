@@ -1,2 +1,1 @@
-import './example/FILTERS-BASIC/DisplacementMapFlag'
-
+import './example/FILTERS-ADVANCED/CustomFilter'
